@@ -1,6 +1,6 @@
 // components/SpendingByCategory.jsx
 import React, { useContext } from 'react';
-import { GlobalContext } from '../context/GlobalState';
+import { GlobalContext } from '../context/GlobalState.jsx';
 
 export const SpendingByCategory = () => {
   const { transactions } = useContext(GlobalContext);

@@ -1,6 +1,6 @@
 // components/TransactionLoader.jsx
 import React, { useContext, useEffect } from 'react';
-import { GlobalContext } from '../context/GlobalState';
+import { GlobalContext } from '../context/GlobalState.jsx';
 
 export const TransactionLoader = ({ userId }) => {
   const { transactions, dispatch } = useContext(GlobalContext);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import Login from "../components/login";
+import Login from "../components/login.jsx";
 import "../styles/Goals.css";
 
 const GoalsPage = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useScreenReader } from '../context/ScreenReaderContext';
+import { useScreenReader } from '../context/ScreenReaderContext.jsx';
 import "../styles/ScreenReader.css";
 
 const ScreenReaderControls = () => {

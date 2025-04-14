@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import "../styles/Home.css";
-import Login from "../components/login";
-import Logout from "../components/logout";
-import ScreenReaderControls from "../components/ScreenReaderControls";
+import Login from "../components/login.jsx";
+import Logout from "../components/logout,jsx";
+import ScreenReaderControls from "../components/ScreenReaderControls.jsx";
 
 function Home() {
   const { isAuthenticated, isLoading } = useAuth0();

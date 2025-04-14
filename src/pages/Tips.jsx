@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useScreenReader } from "../context/ScreenReaderContext";
+import { useScreenReader } from "../context/ScreenReaderContext.jsx";
 import { useAuth0 } from "@auth0/auth0-react";
 import "../styles/Tips.css";
-import Login from "../components/login";
+import Login from "../components/login.jsx";
 
 const TipsPage = () => {
   const [tips, setTips] = useState([]);

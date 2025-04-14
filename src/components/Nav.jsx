@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import "../styles/Nav.css";
 import "../styles/AuthButtons.css"
-import Login from "../components/login";
-import Logout from "../components/logout";
+import Login from "../components/login.jsx";
+import Logout from "../components/logout.jsx";
 
 const Nav = () => {
   const { isAuthenticated } = useAuth0();

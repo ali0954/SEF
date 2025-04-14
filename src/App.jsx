@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Nav from "./components/Nav";
-import Home from "./pages/Home";
-import Tracker from "./pages/Tracker"; 
-import GoalsPage from "./pages/GoalsPage"; 
-import ProfilePage from "./pages/profilepage"; 
-import Tips from "./pages/Tips";
+import Nav from "./components/Nav.jsx";
+import Home from "./pages/Home.jsx";
+import Tracker from "./pages/Tracker.jsx"; 
+import GoalsPage from "./pages/GoalsPage.jsx"; 
+import ProfilePage from "./pages/profilepage.jsx"; 
+import Tips from "./pages/Tips.jsx";
 import "./index.css";
 
 

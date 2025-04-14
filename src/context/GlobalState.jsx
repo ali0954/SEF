@@ -1,6 +1,6 @@
 // context/GlobalState.jsx
 import React, { createContext, useReducer, useEffect } from 'react';
-import AppReducer from './AppReducer';
+import AppReducer from './AppReducer.jsx';
 
 const initialState = {
   transactions: []

@@ -1,6 +1,6 @@
 // components/AddTransaction.jsx
 import React, { useState, useContext } from 'react';
-import { GlobalContext } from '../context/GlobalState';
+import { GlobalContext } from '../context/GlobalState.jsx';
 
 const categories = [
   '🎓 Student Loan',

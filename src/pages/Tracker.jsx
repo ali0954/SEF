@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
-import { Header } from '../components/Header';
-import { Balance } from '../components/Balance';
-import { IncomeExpenses } from '../components/IncomeExpenses';
-import { TransactionList } from '../components/TransactionList';
-import { AddTransaction } from '../components/AddTransaction';
-import { GlobalProvider } from '../context/GlobalState';
-import { SpendingByCategory } from '../components/SpendingByCategory';
-import Login from '../components/login';
+import { Header } from '../components/Header.jsx';
+import { Balance } from '../components/Balance.jsx';
+import { IncomeExpenses } from '../components/IncomeExpenses.jsx';
+import { TransactionList } from '../components/TransactionList.jsx';
+import { AddTransaction } from '../components/AddTransaction.jsx';
+import { GlobalProvider } from '../context/GlobalState.jsx';
+import { SpendingByCategory } from '../components/SpendingByCategory.jsx';
+import Login from '../components/login.jsx';
 import "../styles/Tracker.css";
 
 function Tracker() {
