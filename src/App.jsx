@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Tracker from "./pages/Tracker"; 
 import GoalsPage from "./pages/GoalsPage"; 
-import ProfilePage from "./pages/ProfilePage"; 
+import ProfilePage from "./pages/profilepage"; 
 import Tips from "./pages/Tips";
 import "./index.css";
 
