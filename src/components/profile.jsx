@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import "../styles/Profile.css"; // Make sure you have this import to load your styles
+import "../styles/profile.css"; // Make sure you have this import to load your styles
 
 const Profile = () => {
   const { user, isAuthenticated } = useAuth0();
