@@ -1,0 +1,328 @@
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    font-family: 'Lato', sans-serif;
+  }
+
+  
+
+  .tracker-container {
+    text-align: center;
+    padding: 25px;
+    max-width: 500px; /* Slightly wider for better readability */
+    margin: 120px auto; /* Added more margin for better spacing */
+    margin-bottom: 0px;
+    background: #fff;
+    border-radius: 15px; /* Increased border radius for a softer look */
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border for depth */
+  }
+
+
+  h1 {
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  h3 {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin: 40px 0 10px;
+    color: #333;
+  }
+
+  h4 {
+    margin: 0;
+    color: #333;
+    text-transform: uppercase;
+  }
+
+  .inc-exp-container {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    color: #333;
+  }
+
+  .inc-exp-container > div {
+    flex: 1;
+    text-align: center;
+  }
+
+  .inc-exp-container > div:first-of-type {
+    border-right: 1px solid #dedede;
+  }
+
+  .money {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+  }
+
+  .money.plus {
+    color: #2ecc71;
+  }
+
+  .money.minus {
+    color: #c0392b;
+  }
+
+  label {
+    display: inline-block;
+    margin: 10px 0;
+    color: #333;
+  }
+
+  input[type='text'],
+  input[type='number'] {
+    color: black;
+    background-color: #f9f9f9;
+  
+  border: 2px solid #9c88ff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .btn {
+    cursor: pointer;
+    background-color: #9c88ff;
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 30px;
+    padding: 14px; /* Increased padding for better touch target */
+    width: 100%;
+    position: relative;
+    transition: 
+      background-color 200ms cubic-bezier(0.4, 0, 0.2, 1),
+      transform 120ms ease-out,
+      box-shadow 200ms ease-out;
+    border-radius: 8px; /* Added for Fitts' Law compliance */
+    letter-spacing: 0.5px; /* Improved readability */
+  }
+  
+  /* Hover state with perceptual elevation */
+  .btn:hover {
+    background-color: #7d6bc0;
+    transform: translateY(-1.5px); /* Micro-interaction lift */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18); /* Enhanced depth */
+  }
+
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .list li {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+
+  .list li.plus {
+    border-right: 5px solid #2ecc71;
+  }
+
+  .list li.minus {
+    border-right: 5px solid #c0392b;
+  }
+
+  .delete-btn {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .list li:hover .delete-btn {
+    opacity: 1;
+  }
+
+
+.transaction-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.transaction-text {
+  margin: auto;
+  word-break: break-word; /* breaks long words to avoid overflow */
+  max-width: 100%;        /* prevents growing beyond parent */
+  flex: 1;                /* allows it to grow/shrink within flex */
+}
+
+.transaction-amount {
+  margin: 0 15px;
+  justify-content: center;
+}
+
+.transaction-date {
+  font-size: 0.8rem;
+  color: #000000;
+  width: 160px;         /* use fixed width */
+  text-align: right;
+  flex-shrink: 0;       /* prevent shrinking */
+}
+
+
+
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Add to your Tracker.css */
+.category-breakdown {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.category-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.category-name {
+  font-weight: 500;
+}
+
+.category-amount {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+/* Add to your existing CSS file */
+.category-select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #9c88ff;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 1rem;
+  color: #2c3e50;
+  appearance: none;
+  position: relative;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%239c88ff'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 8px 0;
+}
+
+.category-select:focus {
+  outline: none;
+  border-color: #6a5acd;
+  box-shadow: 0 0 0 3px rgba(156, 136, 255, 0.2);
+}
+
+.category-select option {
+  padding: 12px;
+  background-color: white;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.category-select option:hover {
+  background-color: #f8f9fa !important;
+}
+
+.category-select option:checked {
+  background-color: #9c88ff !important;
+  color: white;
+}
+
+/* Emoji sizing fix */
+.category-select option::before {
+  font-size: 1.2em;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .category-select {
+    padding: 14px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Add to your existing CSS */
+.amount-type-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.type-btn {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #9c88ff;
+  border-radius: 8px;
+  background: white;
+  color: #9c88ff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.type-btn.active {
+  background: #9c88ff;
+  color: white;
+  border-color: #7d6bc0;
+}
+
+.type-btn:hover:not(.active) {
+  background: #f8f9fa;
+}

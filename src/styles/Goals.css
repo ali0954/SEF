@@ -1,0 +1,225 @@
+
+
+.goals-container {
+  text-align: center;
+  padding: 40px;
+  max-width: 400px; /* Slightly wider for better readability */
+  margin: 120px auto; /* Added more margin for better spacing */
+  margin-bottom: 0px;
+  background: #fff;
+  border-radius: 15px; /* Increased border radius for a softer look */
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border for depth */
+}
+
+
+
+h1 {
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.goal-input {
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.goal-input input {
+  padding: 10px;
+  border: 2px solid #6a5acd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 20px;
+  margin: 10px 0 30px;
+  padding: 14px; /* Increased padding for better touch target */
+  width: 100%;
+  position: relative;
+  transition: 
+    background-color 200ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 120ms ease-out,
+    box-shadow 200ms ease-out;
+  border-radius: 8px; /* Added for Fitts' Law compliance */
+  letter-spacing: 0.5px; /* Improved readability */
+}
+
+/* Hover state with perceptual elevation */
+.btn:hover {
+  background-color: #7d6bc0;
+  transform: translateY(-1.5px); /* Micro-interaction lift */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18); /* Enhanced depth */
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+  
+}
+
+.goal-item {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.goal-details {
+  flex: 1;
+}
+
+progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #dedede;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.delete-btn::after {
+  content: 'X'; /* The "X" character */
+  color: white; /* Ensure the X is white */
+  font-size: 20px; /* Adjust the size of the "X" */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the "X" in the button */
+}
+
+/* Footer Section */
+.footer {
+  background-color: #6a5acd;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  border-radius: 50px 50px 0 0;
+}
+/* Updated Celebration overlay to match purple theme */
+.celebration-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #6a5acd; /* Primary purple with opacity */
+  color: white;
+  padding: 1.5rem 3rem;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: celebrate 1.5s ease-out;
+  z-index: 1000;
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+@keyframes celebrate {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+  20% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+  50% { transform: translate(-50%, -50%) rotate(5deg) scale(1); }
+  70% { transform: translate(-50%, -50%) rotate(-5deg) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.5); }
+}
+
+/* Success message */
+.success-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #6a5acd;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  animation: slideIn 0.5s ease-out;
+  box-shadow: var(--box-shadow);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+  z-index: 1000;
+}
+
+@keyframes slideIn {
+  from { transform: translate(-50%, 100%); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .success-message {
+    bottom: 70px; /* Above mobile keyboards */
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Updated Progress bar to match theme */
+progress {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 1rem;
+  border-radius: 5px;
+}
+
+progress.complete {
+  box-shadow: 0 0 8px #9c88ff; /* Purple glow */
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(90deg,  #9c88ff, #6a5acd); /* Yellow to purple */
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); box-shadow: 0 0 15px rgba(156, 136, 255, 0.4); }
+  100% { transform: scale(1); }
+}
+
+/* Loading animation update */
+.loading {
+  animation: pulse 1.2s infinite;
+  color: #9c88ff; /* Purple color */
+}

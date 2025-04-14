@@ -1,0 +1,34 @@
+
+
+/* Profile container */
+.profile-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Profile image */
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  /* User info styling */
+  .profile-container p {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .profile-container h2 {
+    font-size: 1.8rem;
+    color: #5d3b8f;
+    margin-bottom: 10px;
+  }
+  

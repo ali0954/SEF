@@ -1,0 +1,7 @@
+# .gitignore
+node_modules/
+userData/
+.env
+.DS_Store
+dist/
+*.log

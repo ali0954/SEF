@@ -1,0 +1,179 @@
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #9c88ff 30%, #6a5acd 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 30px;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ffaf00;
+  transform: scale(1.05);
+}
+
+/* Features Section */
+.features-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+}
+
+.features-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #6a5acd;
+  margin-bottom: 40px;
+ 
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature h3 {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  color: #9c88ff;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #000000;
+}
+
+/* Fun Emoji Icons */
+.emoji {
+  font-size: 2.5rem;
+  display: block;
+}
+
+/* Call to Action Section */
+.cta-section {
+  text-align: center;
+  background: linear-gradient(to right, #fff, #f4f4ff);
+  padding: 50px 20px;
+  border-top: 1px solid #ddd;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  color: #9c88ff;
+  margin-bottom: 20px;
+}
+
+
+/* Fun Emoji Icons */
+.emoji {
+  font-size: 2.5rem;
+  display: block;
+}
+
+:root {
+  --emoji-color: #000;
+}
+
+[data-theme="dark"] {
+  --emoji-color: #fff;
+}
+
+.emoji {
+  color: var(--emoji-color);
+}
+
+/* Mobile Responsive Styles for screens smaller than iPhone 14 Pro Max */
+@media (max-width: 420px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+    padding: 60px 15px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 24px;
+  }
+
+  .features-title {
+    font-size: 2rem;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .features-container {
+    gap: 15px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .emoji {
+    font-size: 2rem;
+  }
+}
